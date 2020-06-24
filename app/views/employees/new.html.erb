@@ -1,0 +1,17 @@
+<h1>Dunder Miflin: Add Employee</h1>
+
+<%= form_for @employee do |f|%>
+<%= f.label :first_name, "First Name" %>
+<%= f.text_field :first_name %>
+<%= f.label :last_name, "Last Name" %>
+<%= f.text_field :last_name %>
+<%= f.label :alias, "Alias" %>
+<%= f.text_field :alias %>
+<%= f.label :title, "Title" %>
+<%= f.text_field :title %>
+<%= f.label :office, "Office" %>
+<%= f.text_field :office %>
+<%= f.label :dog_id, "Dog" %>
+<%= f.select :dog_id, Dog.names %>
+<%= f.submit "Submit"%>
+<% end %>

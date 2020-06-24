@@ -7,4 +7,10 @@ class Dog < ApplicationRecord
     end
     emp_names.join(', ')
   end
+
+  def self.names
+    self.all.map {|dog| [dog.name, dog.id]}
+  end
+
+
 end
